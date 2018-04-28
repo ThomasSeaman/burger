@@ -14,13 +14,11 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/burger", function (req, res) {
-  burger.create([
-    "name", "devour"
-  ], [
-      req.body.name, req.body.devour
-    ], function (result) {
-      res.json({ id: result.insertId });
-    });
+  burger.create('burger_name', req.body.name, function(data){
+    console.log(data);
+    res.json({ id: data.insertId});
+    
+  });
 });
 
 router.put("/api/burger/:id", function(req, res) {

@@ -19,10 +19,10 @@ $(function() {
 
   $(".create-form").on("submit", function(event) {
     event.preventDefault();
-
+    console.log($("#ca").val().trim());
+    
     var newBurger = {
-      burger_name: $("#ca").val().trim(),
-      devour: $("[burger_name=devour]:checked").val().trim()
+      name: $("#ca").val().trim()
     };
 
     $.ajax("/api/burger", {

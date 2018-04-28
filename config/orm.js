@@ -39,18 +39,24 @@ var orm = {
     });
   },
   create: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+    // var queryString = "INSERT INTO " + table;
 
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+    // queryString += " (";
+    // queryString += cols.toString();
+    // queryString += ") ";
+    // queryString += "VALUES (";
+    // queryString += printQuestionMarks(vals.length);
+    // queryString += ") ";
 
-    console.log(queryString);
+    // console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    // var queryHardString = "INSERT INTO burgers (burger_name) VALUES ('McDonalds')"
+
+    // var queryString = "INSERT INTO " + table + "("+ cols +") VALUES ('"+ vals +"')"
+
+    var queryStringWQ = "INSERT INTO " + table + "("+ cols +") VALUES (?)"
+    
+    connection.query(queryStringWQ, vals, function(err, result) {
       if (err) {
         throw err;
       }
