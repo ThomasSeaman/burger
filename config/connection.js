@@ -7,12 +7,17 @@ var mysql = require("mysql");
 //   password: "root",
 //   database: "burgers_db"
 // });
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'burgers_db',
-  socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
+var connection;
+
+if (process.env.JAWSDB_URL){
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
+    database: 'burgers_db',
+    root: 8889
 });
 
 connection.connect(function(err) {
