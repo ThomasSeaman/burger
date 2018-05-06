@@ -10,8 +10,11 @@
 ## Dependencies
 
 > body-parser version 1.18.2
+
 > express version 4.16.3
+
 > express-handlebars version 3.0.0
+
 > mysql version 2.15.0
 
 
