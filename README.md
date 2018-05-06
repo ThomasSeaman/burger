@@ -1,9 +1,9 @@
 # Burger Builder App
-> Short blurb about what your product does.
+> In the Burger Build App, a user is able to create and devour burger's to a database. 
 
 [![NPM Version][npm-image]][npm-url]
 
-In the Burger Build App, a user is able to create and devour burger's to a database. Check out the functionality live Heroku: https://peaceful-taiga-48560.herokuapp.com/
+Check out the functionality live Heroku: https://peaceful-taiga-48560.herokuapp.com/
 
 ![](burger.jpg)
 
